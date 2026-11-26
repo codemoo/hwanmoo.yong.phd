@@ -283,7 +283,7 @@ html[lang="ko"] #locrow { display: none; }
     </div>
     <div class="row g3">
       <dt data-i18n="kTeach">Teaching</dt>
-      <dd class="span2"><div class="ln"><span data-i18n="teach">Lecturer, Yonsei University</span><span class="when">2022–23</span></div></dd>
+      <dd class="span2"><div class="ln"><span data-i18n="teach">Lecturer in Mechanical Engineering, Yonsei University</span><span class="when">2022–23</span></div></dd>
     </div>
   </dl>
 
@@ -338,7 +338,7 @@ html[lang="ko"] #locrow { display: none; }
       navWork: "Work", navContact: "Contact",
       kNow: "Now", now1: "CEO, Moomoo Company", now2: "CTO, Funeasy",
       kEdu: "Education", edu: "Ph.D., M.S. and B.S. in Mechanical Engineering, Yonsei University",
-      kTeach: "Teaching", teach: "Lecturer, Yonsei University",
+      kTeach: "Teaching", teach: "Lecturer in Mechanical Engineering, Yonsei University",
       dev: "Development", res: "Research", byYear: "By year",
       kPaper: "Paper", kPatent: "Patent",
       jcrNote: "Journal metrics from JCR 2025.",
@@ -373,16 +373,16 @@ html[lang="ko"] #locrow { display: none; }
     ],
     res: [
       { n: "6", u: { ko: "건" }, en: "industry and government R&D projects", ko: "산학·정부 R&D 과제" },
-      { n: "4", u: { ko: "편" }, en: "SCI(E) journal papers, 2 as first author", ko: "SCI(E) 저널 논문(제1저자 2편)" },
+      { n: "4", u: { ko: "편" }, en: "SCI(E) journal papers, 2 as first author, 1 as co-first author", ko: "SCI(E) 저널 논문(제1저자 2편, 공동\u00a0제1저자 1편)" },
       { n: "4", u: { ko: "건" }, en: "patents granted as co-inventor", ko: "특허 등록(공동 발명)" }
     ],
     devCap: {
-      en: "<a href=\"" + GITHUB + "\" rel=\"noopener\" target=\"_blank\">GitHub</a> · Logistics, music rights, healthcare, rewards, commerce",
-      ko: "<a href=\"" + GITHUB + "\" rel=\"noopener\" target=\"_blank\">GitHub</a> · 물류, 음악 저작권, 의료, 리워드, 커머스"
+      en: "<a href=\"" + GITHUB + "\" rel=\"noopener\" target=\"_blank\">GitHub</a> · Logistics, music rights, healthcare, ad tech, blockchain, commerce",
+      ko: "<a href=\"" + GITHUB + "\" rel=\"noopener\" target=\"_blank\">GitHub</a> · 물류, 음악 저작권, 의료, 애드테크, 블록체인, 커머스"
     },
     resCap: {
-      en: "<a href=\"" + SCHOLAR + "\" rel=\"noopener\" target=\"_blank\">Google Scholar</a> · Paper Award (2023)",
-      ko: "<a href=\"" + SCHOLAR + "\" rel=\"noopener\" target=\"_blank\">Google Scholar</a> · 논문상(2023)"
+      en: "<a href=\"" + SCHOLAR + "\" rel=\"noopener\" target=\"_blank\">Google Scholar</a> · Reinforcement learning, vehicle dynamics and control, state estimation, service robots",
+      ko: "<a href=\"" + SCHOLAR + "\" rel=\"noopener\" target=\"_blank\">Google Scholar</a> · 강화학습, 차량 동역학·제어, 상태 추정, 서비스 로봇"
     }
   };
 
@@ -394,97 +394,87 @@ html[lang="ko"] #locrow { display: none; }
     tase: { v: "IEEE Transactions on Automation Science and Engineering", doi: "10.1109/TASE.2020.2980305", q: "Q1", jif: "7.9", top: "11.9", cat: "Automation & Control Systems" }
   };
 
-  /* y = anchor (start) year on the rail. p = period shown on the row. href = detail page ("#" = detail page planned, not built yet). */
+  /* y = anchor (start) year on the rail. p = period shown on the row. href = detail page ("#" = detail page planned, not built yet).
+     noLong = keep a 3-year row out of the long-running band (light early work stays in the rail only).
+     kind "patent": t = official title, one row per patent at its grant year. */
   var DEV = [
     { y: 2026, p: "2026", href: "#",
-      en: { t: "Private multilingual email AI for a freight forwarder", m: "Sole developer", r: "Est. **30–47%** less outgoing email work" },
-      ko: { t: "물류 기업의 사내 전용 다국어 메일 AI", m: "단독 개발", r: "발신 메일 업무 **30–47%** 절감(추정)" } },
+      en: { t: "Private-LLM multilingual email automation for an international freight forwarder", m: "Sole engineer, end to end", r: "**30–47%** less outgoing email work (estimated)" },
+      ko: { t: "국제 물류 기업의 사내 LLM 다국어 메일 자동화", m: "단독 개발·운영", r: "발신 메일 업무 **30–47%** 절감(추정)" } },
     { y: 2026, p: "2026–", href: "#",
       en: { t: "Campaign settlement platform", r: "Participant app, customer portal and admin tool on **one settlement engine**" },
       ko: { t: "캠페인 정산 플랫폼", r: "참여자 앱, 고객 포털, 관리 도구를 **정산 엔진 하나**로 통합" } },
     { y: 2026, p: "2026–", href: "#",
-      en: { t: "Campaign distribution and settlement hub", r: "Multiple partner channels, **1,800+** automated tests" },
-      ko: { t: "캠페인 유통·정산 허브", r: "다수 파트너 채널 연동, 자동 테스트 **1,800+**" } },
+      en: { t: "Campaign distribution and settlement hub", r: "Routes campaign volume to **multiple partner channels** and settles it automatically" },
+      ko: { t: "캠페인 유통·정산 허브", r: "캠페인 물량을 **다수 파트너 채널**에 배분하고 자동 정산" } },
     { y: 2025, p: "2025",
-      en: { t: "Transaction processing technology for the Solana blockchain" },
-      ko: { t: "솔라나 블록체인 트랜잭션 처리 기술 개발" } },
+      en: { t: "Transaction processing technology for the Solana blockchain", r: "Dedicated servers built and run across multiple overseas regions" },
+      ko: { t: "솔라나 블록체인 트랜잭션 처리 기술 개발", r: "해외 여러 지역에 전용 서버 인프라 구축·운영" } },
     { y: 2023, p: "2023–", href: "#",
-      en: { t: "Royalty settlement system for a music rights company", m: "Sole developer", r: "Automated royalty statements and settlement" },
-      ko: { t: "음악 권리사의 저작권료 정산 시스템", m: "단독 개발", r: "명세서 및 정산 시스템 자동화" } },
+      en: { t: "Company-wide ERP for a music rights company", m: "Sole engineer, end to end", r: "Automated royalty statements and settlement" },
+      ko: { t: "음악 권리사의 전사 ERP", m: "단독 개발·운영", r: "명세서 및 정산 시스템 자동화" } },
     { y: 2023, p: "2023–", href: "#",
       en: { t: "Mobile rewards platform", r: "Ledger of **hundreds of millions** of transactions" },
       ko: { t: "모바일 리워드 플랫폼", r: "거래 원장 **수억 건** 규모" } },
     { y: 2023, p: "2023", href: "#",
-      en: { t: "Medical imaging AI service", m: "Sole developer", r: "Built the AI analysis server, app and web" },
-      ko: { t: "의료영상 AI 서비스", m: "단독 개발", r: "AI 분석 서버와 앱·웹 구축" } },
+      en: { t: "Cardiac imaging AI service", m: "Sole developer", r: "Built the AI analysis server, app and web" },
+      ko: { t: "심장 영상 분석 AI 서비스", m: "단독 개발", r: "AI 분석 서버와 앱·웹 구축" } },
     { y: 2021, p: "2021–25", href: "#",
-      en: { t: "Clinical mobile services for a hospital research team", m: "Sole developer", r: "**3** services across **4** contracts" },
-      ko: { t: "병원 연구팀의 임상 모바일 서비스", m: "단독 개발", r: "서비스 **3건**, 계약 **4회**" } },
+      en: { t: "Referral and patient-record services for a major hospital's research team", m: "Sole developer", r: "Apps, web and servers, with medical-device integration" },
+      ko: { t: "대형 병원 연구팀의 진료 협력·환자 기록 서비스", m: "단독 개발", r: "앱·웹·서버 구축과 의료 측정 장치 연동" } },
     { y: 2020, p: "2020–23", href: "#",
-      en: { t: "Reorder commerce app", m: "Co-founder, backend lead", r: "**Thousands** of orders a month" },
-      ko: { t: "재구매 커머스 앱", m: "공동창업 · 백엔드 리드", r: "월 **수천 건** 주문" } },
+      en: { t: "Reorder commerce service", m: "Co-founder, backend lead", r: "Built the backend: payments, delivery tracking and operations tooling" },
+      ko: { t: "재구매 커머스 서비스", m: "공동창업 · 백엔드 리드", r: "결제, 배송 추적, 운영 관리 도구 등 백엔드 전반 구축" } },
     { y: 2020, p: "2020–21",
-      en: { t: "Membership community platform and mobile app" },
-      ko: { t: "정기 모임 서비스 플랫폼과 모바일 앱" } },
+      en: { t: "Paid membership platform", r: "From payments and automated messaging to retention and revenue analytics" },
+      ko: { t: "유료 멤버십 플랫폼", r: "결제·자동 알림 발송부터 회원 유지·매출 지표까지" } },
     { y: 2020, p: "2020–21",
-      en: { t: "Custom-fit ordering web with phone-photo measurement" },
-      ko: { t: "스마트폰 사진으로 치수를 재는 맞춤 주문 웹사이트" } },
-    { y: 2020, p: "2020–21",
-      en: { t: "Family outings app: backend and launch" },
-      ko: { t: "가족 나들이 정보 앱의 서버 구축과 출시" } },
+      en: { t: "Custom-fit ordering with AI sizing from phone video" },
+      ko: { t: "스마트폰 촬영으로 AI가 치수를 재는 맞춤 주문 서비스" } },
     { y: 2018, p: "2018–20",
-      en: { t: "Operations system and online store for an eyewear store network", r: "Intake to settlement for **hundreds** of stores" },
-      ko: { t: "안경 매장망 운영 시스템과 온라인몰", r: "매장 **수백 곳**의 접수부터 정산까지" } },
+      en: { t: "Operations system and in-house commerce platform for an eyewear store network", r: "Intake to settlement for **hundreds** of stores" },
+      ko: { t: "안경 매장망 운영 시스템과 자체 커머스 플랫폼", r: "매장 **수백 곳**의 접수부터 정산까지" } },
     { y: 2017, p: "2017–18",
-      en: { t: "Corporate travel management platform" },
-      ko: { t: "기업 출장 관리 플랫폼" } },
-    { y: 2015, p: "2015–17",
-      en: { t: "First iOS app, shipped at an undergraduate startup" },
-      ko: { t: "학부 시절 스타트업에서 첫 iOS 앱 출시" } },
-    { y: 2014, p: "2014–16",
-      en: { t: "Academy management system" },
-      ko: { t: "학원 관리 시스템" } }
+      en: { t: "Corporate travel management platform", r: "Integrated with global airline reservation systems" },
+      ko: { t: "기업 출장 관리 플랫폼", r: "글로벌 항공 예약 시스템 연동" } },
+    { y: 2015, p: "2015–17", noLong: true,
+      en: { t: "Multi-party scheduling app" },
+      ko: { t: "다자간 일정 조율 앱 개발" } },
+    { y: 2014, p: "2014–16", noLong: true,
+      en: { t: "Student and grade management system for academies" },
+      ko: { t: "학원 수강생·성적 관리 시스템" } }
   ];
 
   var RES = [
-    { y: 2023, p: "2023", href: "#",
-      en: { t: "AI test driver for steering-system evaluation", m: "with an auto parts maker · lead researcher", r: "Steadier than the stock driver model, **cone hits eliminated**" },
-      ko: { t: "조향 시스템 평가용 AI 시험운전자", m: "자동차 부품사 산학과제 · 연구 책임", r: "기본 운전자 모델보다 안정적, **콘 충돌 없음**" } },
-    { y: 2023, p: "2023",
-      en: { t: "Ocean sensor data clustering, proof of concept" },
-      ko: { t: "해양 관측 데이터 군집 분석 PoC" } },
+    { y: 2023, p: "2023–24", href: "#",
+      en: { t: "AI test driver for next-generation steering systems", m: "with an auto parts maker · technical lead", r: "In simulation, handles **limit maneuvers** steadily; delivered to the maker" },
+      ko: { t: "차세대 조향 시스템 평가용 AI 시험운전자", m: "자동차 부품사 산학과제 · 실무 총괄", r: "시뮬레이션에서 **한계 주행**까지 안정적으로 소화, 부품사에 납품" } },
     { y: 2023, kind: "paper", pub: "tie", en: { t: "first author · Paper Award" }, ko: { t: "제1저자 · 논문상" } },
-    { y: 2023, kind: "patent", en: { t: "2 granted, as co-inventor" }, ko: { t: "2건 등록(공동 발명)" } },
-    { y: 2022, p: "2022",
-      en: { t: "Multiplayer autonomous racing simulator for a graduate course" },
-      ko: { t: "대학원 수업용 멀티플레이 자율주행 레이싱 시뮬레이터" } },
+    { y: 2023, kind: "patent", en: { t: "VR simulator control method using emotional state estimation" }, ko: { t: "감정 상태 추정을 이용한 VR 시뮬레이터 제어 방법" } },
+    { y: 2023, kind: "patent", en: { t: "Method for estimating integrable physical quantities using an artificial neural network" }, ko: { t: "인공신경망을 이용한 적분산출가능물리량 추정방법" } },
     { y: 2021, p: "2021",
-      en: { t: "Learned vehicle state estimation" },
-      ko: { t: "학습 기반 차량 상태 추정" } },
+      en: { t: "Learned vehicle state estimation from low-cost sensors", r: "Recovers speed and displacement from accelerometer and gyro signals alone" },
+      ko: { t: "저가 센서 기반 학습형 차량 상태 추정", r: "가속도·자이로 신호만으로 속도·변위 복원" } },
     { y: 2021, kind: "paper", pub: "nd", en: { t: "first author" }, ko: { t: "제1저자" } },
     { y: 2021, kind: "paper", pub: "pla", en: { t: "co-author" }, ko: { t: "공저자" } },
-    { y: 2021, kind: "patent", en: { t: "1 granted, as co-inventor" }, ko: { t: "1건 등록(공동 발명)" } },
-    { y: 2020, kind: "paper", pub: "tase", en: { t: "co-author" }, ko: { t: "공저자" } },
-    { y: 2020, kind: "patent", en: { t: "1 granted, as co-inventor" }, ko: { t: "1건 등록(공동 발명)" } },
+    { y: 2021, kind: "patent", en: { t: "Concierge robot and method of providing personalized service using the same" }, ko: { t: "컨시어지 로봇 및 이를 이용한 고객 맞춤형 서비스 제공 방법" } },
+    { y: 2020, kind: "paper", pub: "tase", en: { t: "co-first author" }, ko: { t: "공동\u00a0제1저자" } },
+    { y: 2020, kind: "patent", en: { t: "Suspension control system based on reinforcement learning" }, ko: { t: "강화학습 기반 서스펜션 제어장치" } },
     { y: 2019, p: "2019–20", href: SUSPENSION,
-      en: { t: "Learned semi-active suspension control", m: "with an automaker", r: "Learned controller **verified on a real car**" },
-      ko: { t: "학습형 반능동 서스펜션 제어", m: "완성차 업체 산학과제", r: "학습 제어기 **실차 검증**" } },
-    { y: 2019, p: "2019–21",
-      en: { t: "AI-designed operating rules for a manufacturing line", m: "Industry R&D" },
-      ko: { t: "제조 라인 운영 규칙을 AI로 자동 설계", m: "산학과제" } },
+      en: { t: "Reinforcement learning control for semi-active suspension", m: "with an automaker", r: "Learned controller run **on a real car** and tested on the road" },
+      ko: { t: "강화학습 기반 반능동 서스펜션 제어", m: "완성차 업체 산학과제", r: "학습 제어기를 **실차**에 탑재해 주행 시험으로 검증" } },
     { y: 2019, p: "2019–20",
-      en: { t: "Semi-active suspension control strategies using deep learning", m: "M.S. thesis" },
-      ko: { t: "딥러닝 기반 반능동 서스펜션 제어 전략", m: "석사학위 논문" } },
+      en: { t: "AI-designed operating rules for a manufacturing line", m: "with a manufacturing-equipment company", r: "Verified running in a real controller environment" },
+      ko: { t: "제조 라인 운영 규칙을 AI로 자동 설계", m: "제조 설비 기업 산학과제", r: "실제 제어기 환경에서 구동 검증" } },
     { y: 2017, p: "2017–18",
-      en: { t: "AI attendant robot for VR simulators", m: "Government R&D", r: "Field-tested with **hundreds** of visitors" },
-      ko: { t: "VR 시뮬레이터용 AI 안내 로봇", m: "정부 R&D", r: "방문객 **수백 명** 대상 현장 검증" } }
+      en: { t: "Customer-aware AI attendant robot for VR simulators", m: "Government R&D", r: "Field-tested with **hundreds** of visitors in a live venue; significantly higher satisfaction" },
+      ko: { t: "VR 시뮬레이터용 고객 맞춤형 AI 안내 로봇", m: "정부 R&D", r: "방문객 **수백 명** 대상 현장 검증, 만족도 유의하게 향상" } }
   ];
-
   var lang = "en";
 
   /* Period from p: "2021–25" = 2021 to 2025, "2023–" = ongoing (through NOW_Y).
      Band scale: 2013.5 to the end of NOW_Y, so the 2014 label (centred on mid-2014 like the others) has room on the left. */
-  var NOW_Y = 2026, AX0 = 2013.5, AX1 = NOW_Y + 1, LONG_CAL = 3;
+  var NOW_Y = 2026, AX0 = 2013.5, AX1 = NOW_Y + 1, LONG_CAL = 3, LONG_CAL_RES = 2; /* research projects ran late spring to early next year, so 2 calendar years already means a long project */
   function span(it) {
     var m = it.p && /^(\d{4})(–)?(\d{2}|\d{4})?$/.exec(it.p);
     if (!m) return null;
@@ -495,8 +485,8 @@ html[lang="ko"] #locrow { display: none; }
   /* Stable ids so band rows can link to their item in the year rail. */
   DEV.forEach(function (it, i) { it.id = "w-dev-" + i; it.trk = "dev"; });
   RES.forEach(function (it, i) { it.id = "w-res-" + i; it.trk = "res"; });
-  /* Long-running = spans 3+ calendar years (ongoing counted through NOW_Y). */
-  function isLong(it) { var sp = span(it); return !!sp && sp.e - sp.s + 1 >= LONG_CAL; }
+  /* Long-running = development spans 3+ calendar years, research 2+ (ongoing counted through NOW_Y), unless the row opts out with noLong. */
+  function isLong(it) { var sp = !it.noLong && span(it); return !!sp && sp.e - sp.s + 1 >= (it.trk === "res" ? LONG_CAL_RES : LONG_CAL); }
   /* Period text shared by the band and the year rail: "2023–now" for ongoing work. */
   function periodHTML(it) {
     var sp = span(it);
