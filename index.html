@@ -83,6 +83,7 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
 
 /* Bio */
 .bio .row { padding: 11px 0; border-top: 1px solid var(--line); }
+html[lang="ko"] #locrow { display: none; }
 .bio dt { color: var(--muted); font-size: 13px; padding-top: 2px; }
 .bio dd { display: grid; gap: 2px; text-wrap: pretty; }
 .ln { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 12px; }
@@ -174,6 +175,9 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
 .links a { color: var(--soft); text-decoration: none; padding: 4px 0; }
 .links a:hover { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
 .biz { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.bio .mail a { font-size: inherit; }
+.bio .links { margin-top: 2px; }
+.foot .biz { margin-top: 0; }
 
 @media (max-width: 720px) {
   :root { --rail: 44px; --gap: 14px; --stick: 10px; }
@@ -239,7 +243,6 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
     <h1><span data-i18n="name">Hwanmoo Yong, Ph.D.</span><span class="alt" data-i18n="nameAlt">용환무</span></h1>
     <nav class="nav" aria-label="Sections">
       <a href="#work" data-i18n="navWork">Work</a>
-      <a href="#contact" data-i18n="navContact">Contact</a>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-lang="en" aria-pressed="true">EN</button>
         <button type="button" data-lang="ko" aria-pressed="false">KO</button>
@@ -248,6 +251,25 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
   </header>
 
   <dl class="bio" id="bio">
+    <div class="row g3" id="locrow">
+      <dt>Based in</dt>
+      <dd class="span2"><div class="ln"><span>Seoul, South Korea</span><span class="when" id="loctime">KST (UTC+9)</span></div></dd>
+    </div>
+    <div class="row g3" id="contact">
+      <dt data-i18n="contact">Contact</dt>
+      <dd class="span2">
+        <div class="mail">
+          <a href="mailto:hwanmoo@yong.phd" id="mail">hwanmoo@yong.phd</a>
+          <button type="button" class="copy" id="copy" data-i18n="copy">Copy</button>
+          <span class="sr" id="copy-live" aria-live="polite"></span>
+        </div>
+        <div class="links">
+          <a href="https://github.com/codemoo" rel="noopener" target="_blank">GitHub</a>
+          <a href="https://scholar.google.com/citations?user=ZsskQO4AAAAJ" rel="noopener" target="_blank">Google Scholar</a>
+          <a href="https://instagram.com/hwanmoo.yong" rel="noopener" target="_blank">Instagram</a>
+        </div>
+      </dd>
+    </div>
     <div class="row g3">
       <dt data-i18n="kNow">Now</dt>
       <dd class="span2">
@@ -295,19 +317,9 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
     <div class="g3 note-row"><p class="note" data-i18n="jcrNote">Journal metrics from JCR 2025.</p></div>
   </section>
 
-  <footer class="foot g3" id="contact">
-    <div class="lbl" data-i18n="contact">Contact</div>
+  <footer class="foot g3">
+    <div class="lbl"></div>
     <div class="span2">
-      <div class="mail">
-        <a href="mailto:hwanmoo@yong.phd" id="mail">hwanmoo@yong.phd</a>
-        <button type="button" class="copy" id="copy" data-i18n="copy">Copy</button>
-        <span class="sr" id="copy-live" aria-live="polite"></span>
-      </div>
-      <div class="links" style="margin-top:8px">
-        <a href="https://instagram.com/hwanmoo.yong" rel="noopener" target="_blank">Instagram</a>
-        <a href="https://github.com/codemoo" rel="noopener" target="_blank">GitHub</a>
-        <a href="https://scholar.google.com/citations?user=ZsskQO4AAAAJ" rel="noopener" target="_blank">Google Scholar</a>
-      </div>
       <p class="biz" data-i18n="biz">Moomoo Company · CEO Hwanmoo Yong · Business registration 427-35-01491</p>
     </div>
   </footer>
@@ -610,6 +622,15 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
     renderYears();
     if (save) { try { localStorage.setItem("yong.lang", l); } catch (e) {} }
   }
+
+  /* English only: local time in Seoul for international visitors. */
+  function tickLocal() {
+    var el = document.getElementById("loctime"), t = "";
+    try { t = new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Seoul", hour: "numeric", minute: "2-digit" }).format(new Date()) + " "; } catch (e) {}
+    if (el) el.textContent = t + "KST (UTC+9)";
+  }
+  tickLocal();
+  setInterval(tickLocal, 30000);
 
   document.querySelectorAll("[data-lang]").forEach(function (b) {
     b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang"), true); });
