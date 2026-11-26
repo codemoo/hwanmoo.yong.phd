@@ -73,7 +73,7 @@ button { cursor: pointer; }
   margin: 0; font-size: var(--step-2); font-weight: 450; line-height: 1.28;
   letter-spacing: -0.015em; text-wrap: balance; max-width: 30ch;
 }
-.intro p { margin: 0; color: var(--muted); }
+.intro p { margin: 0; color: var(--muted); text-wrap: pretty; }
 
 /* Simulation */
 .sim { display: grid; gap: 14px; }
@@ -481,7 +481,7 @@ var SimCore = (function () {
       speed: 'Speed', run: 'Run again',
       caption: 'The lower car’s suspension is driven live in your browser by a neural network trained with reinforcement learning. Simplified quarter-car model, vertical motion ×3.',
       fieldsTitle: 'Research and engineering',
-      summary: '4 SCI(E) journal papers (2 as first author), 1 IEEE conference paper, 4 registered patents.',
+      summary: '4 SCI(E) journal papers (2 as first author), 1 IEEE VR poster, 4 patents granted as co-inventor.',
       prototype: 'Prototype',
       policyNote: 'Controller weights are a placeholder until training finishes.',
       now: 'now',
@@ -500,8 +500,8 @@ var SimCore = (function () {
       }
     },
     ko: {
-      lead: '소프트웨어를 만들고, 차량 제어를 위한 기계학습을 연구합니다.',
-      role: '연세대학교 기계공학 박사. 무무컴퍼니 대표, 퍼니지 CTO.',
+      lead: '소프트웨어를 만들고 기계학습으로 차량 제어를 연구합니다.',
+      role: '연세대학교 기계공학과 공학박사. 무무컴퍼니 대표, 퍼니지 CTO.',
       simTitle: '서스펜션 데모',
       fieldK: '연구 분야',
       fieldV: '차량 제어를 위한 강화학습',
@@ -509,11 +509,11 @@ var SimCore = (function () {
       passive: '일반 서스펜션',
       learned: '학습된 제어기',
       bump: '과속방지턱', pothole: '포트홀', rough: '비포장',
-      speed: '속도', run: '다시 달리기',
-      caption: '아래 차의 서스펜션은 강화학습으로 학습한 신경망이 브라우저에서 실시간으로 제어합니다. 단순화한 1/4 차량 모델이며, 수직 움직임은 3배 확대했습니다.',
+      speed: '속도', run: '다시 주행',
+      caption: '아래 차의 서스펜션은 강화학습으로 훈련한 신경망이 브라우저에서 실시간으로 제어합니다. 단순화한 1/4 차량 모델이며 수직 움직임은 3배 확대했습니다.',
       fieldsTitle: '연구와 개발',
-      summary: 'SCI(E) 저널 논문 4편(제1저자 2편), IEEE 국제학회 논문 1편, 등록 특허 4건.',
-      prototype: '시제품',
+      summary: 'SCI(E) 저널 논문 4편(제1저자 2편), IEEE VR 포스터 1편, 특허 등록 4건(공동 발명).',
+      prototype: '시안',
       policyNote: '제어기 가중치는 학습이 끝날 때까지 임시 값입니다.',
       now: '현재',
       result: function (pct) {
@@ -526,8 +526,8 @@ var SimCore = (function () {
       wait: '주행이 끝나면 결과가 나옵니다.',
       srRms: function (name, v) { return name + ': 주행 전체 차체 가속도 RMS ' + v + ' m/s²'; },
       srLive: function (road, kmh, pct, a, b) {
-        return road + ', 시속 ' + kmh + 'km: 차체 가속도 RMS ' + a + '에서 ' + b + ' m/s²로, 일반 서스펜션보다 ' +
-          (pct >= 0 ? pct + '% 낮음' : (-pct) + '% 높음') + '.';
+        return road + ', 시속 ' + kmh + 'km: 학습된 제어기의 차체 가속도 RMS는 ' + b + ' m/s²로 일반 서스펜션(' + a + ' m/s²)보다 ' +
+          (pct >= 0 ? pct + '% 낮습니다' : (-pct) + '% 높습니다') + '.';
       }
     }
   };
@@ -539,8 +539,8 @@ var SimCore = (function () {
             note: 'The demo above is a fresh, simplified take on this problem, not the controller from the papers.',
             evid: ['IEEE TIE 2023', 'Patent 2020'] },
       ko: { name: '차량 제어를 위한 강화학습',
-            line: '스스로 학습한 서스펜션 제어기가 노면에 맞춰 전략을 바꾸고, 실제 차량에서 검증됐습니다.',
-            note: '위 데모는 같은 문제를 단순한 모델로 새로 만든 예시이며, 논문 속 제어기는 아닙니다.',
+            line: '스스로 학습한 서스펜션 제어기가 노면에 맞춰 전략을 바꿉니다. 실제 차량에서도 검증했습니다.',
+            note: '위 데모는 같은 문제를 단순한 모델로 새로 만든 예시입니다. 논문 속 제어기는 아닙니다.',
             evid: ['IEEE TIE 2023', '특허 2020'] } },
     { key: 'est', from: 2019, to: 2021,
       en: { name: 'Learned state estimation',
@@ -553,21 +553,21 @@ var SimCore = (function () {
       en: { name: 'Autonomous chassis testing',
             line: 'Learned test drivers that repeat limit maneuvers, so new steering systems can be judged in simulation.',
             evid: ['Industry project with an auto parts maker, 2023'] },
-      ko: { name: '자율 섀시 시험과 운전자 모델',
+      ko: { name: '섀시 시험 자동화와 운전자 모델',
             line: '한계 주행을 똑같이 반복하는 AI 시험운전자로 새 조향 시스템을 시뮬레이션에서 평가합니다.',
-            evid: ['자동차 부품사와 산학과제 2023'] } },
+            evid: ['자동차 부품사 산학과제 2023'] } },
     { key: 'hmi', from: 2017, to: 2020,
       en: { name: 'Human–machine interaction',
             line: 'Emotion recognition for players wearing VR headsets, and a robot attendant that tailors service to each guest.',
             evid: ['IEEE T-ASE 2020', 'IEEE VR 2019'] },
       ko: { name: '사람과 기계의 상호작용',
-            line: 'VR 헤드셋을 쓴 사용자의 감정을 인식하고, 손님에 맞춰 응대하는 서비스 로봇을 만들었습니다.',
+            line: 'VR 헤드셋을 쓴 사용자의 감정 인식을 연구했습니다. 손님마다 맞춰 응대하는 안내 로봇도 만들었습니다.',
             evid: ['IEEE T-ASE 2020', 'IEEE VR 2019'] } },
     { key: 'llm', from: 2026, to: 2026, ongoing: true,
       en: { name: 'LLM systems for real work',
             line: 'Systems that read multilingual business email and turn it into work decisions, run in-house at a fraction of cloud cost.' },
       ko: { name: '업무용 LLM 시스템',
-            line: '여러 언어로 오가는 업무 메일을 읽고 업무 판단으로 바꾸는 시스템을, 클라우드보다 훨씬 적은 비용으로 자체 운영했습니다.' } },
+            line: '여러 언어로 오가는 업무 메일을 읽고 처리할 일을 판단하는 시스템을 클라우드보다 훨씬 적은 비용으로 자체 운영했습니다.' } },
     { key: 'dev', from: 2014, to: 2026, ongoing: true,
       en: { name: 'Software in production',
             line: 'Business systems, mobile apps and clinical research software, built and run in production, often as the sole engineer.',
