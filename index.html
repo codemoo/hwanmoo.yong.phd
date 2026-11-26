@@ -129,6 +129,34 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
 .minor .j { grid-column: 2; margin-top: 1px; font-size: 13px; color: var(--muted); text-wrap: pretty; }
 .note { padding-top: 14px; font-size: 13px; color: var(--muted); }
 .note-row .note { grid-column: 3; }
+.it .when .nw { color: var(--soft); }
+/* Rail items that are also in the long-running band: their period reads a step brighter, and on desktop a short 1px mark sits in the gutter before the title. */
+.it { scroll-margin-top: 64px; }
+.it.lg { position: relative; }
+.it.lg::before { content: ""; position: absolute; left: -18px; top: 10px; width: 10px; height: 1px; background: var(--soft); }
+.it.lg .m .when { color: var(--soft); }
+
+/* Long-running band: work spanning 3+ calendar years, on a shared 2014–now scale. Desktop: one list per track. Mobile: one list. Each title links to its item in the year rail. */
+.long { padding: 14px 0 16px; border-top: 1px solid var(--line); }
+.long .lh { font-size: 13px; font-weight: 400; color: var(--muted); line-height: 1.35; padding-top: 2px; }
+.lcol { min-width: 0; align-self: start; }
+.lcol.dev { grid-column: 2; }
+.lcol.res { grid-column: 3; }
+.lcol.all { display: none; }
+.axis { position: relative; height: 14px; margin-bottom: 6px; font-family: var(--mono); font-size: 11px; line-height: 14px; color: var(--faint); font-variant-numeric: tabular-nums; }
+.axis span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+.axis span:last-child { transform: translateX(-100%); }
+.lrs { display: grid; gap: 6px; align-content: start; }
+.lr { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "t d" "b b"; column-gap: 12px; row-gap: 2px; align-items: baseline; }
+.lr .lt { grid-area: t; font-size: 14px; line-height: 1.35; color: var(--soft); text-wrap: pretty; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: transparent; text-underline-offset: 3px; }
+.lr a.lt:hover { color: var(--fg); text-decoration-color: var(--faint); }
+.lr .when { grid-area: d; font-size: 12px; }
+.lr .nw { color: var(--fg); }
+.lb { grid-area: b; position: relative; height: 3px; align-self: center; }
+.lb::before { content: ""; position: absolute; left: 0; right: 0; top: 1px; height: 1px; background: var(--line); }
+.lb i { position: absolute; top: 0; height: 3px; background: var(--soft); }
+.lb i.open { background: var(--fg); }
+.lb i.open::after { content: ""; position: absolute; right: 0; top: -3px; width: 2px; height: 9px; background: var(--fg); }
 
 /* Footer */
 .foot { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line); row-gap: 10px; }
@@ -179,6 +207,18 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
   .yr.both .y { grid-row: 1 / span 2; }
   .it .m { margin-top: 2px; }
   .note-row .note { grid-column: 2; }
+
+  .long { display: block; padding: 0 0 6px; border-top: 0; }
+  .long .lh { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; padding: 22px 0 12px; border-top: 1px solid var(--line); font-size: 15px; font-weight: 500; color: var(--fg); }
+  .lcol.dev, .lcol.res { display: none; }
+  .lcol.all { display: block; }
+  .lcol.all .axis { margin: 0 0 8px 12px; }
+  .lrs { gap: 5px; }
+  .lr { column-gap: 10px; row-gap: 2px; padding-left: 10px; border-left: 2px solid var(--trk-dev); }
+  .lr.res { border-left-color: var(--trk-res); }
+  .lr .lt { font-size: 13px; white-space: normal; overflow: visible; text-wrap: pretty; }
+  .it { scroll-margin-top: 16px; }
+  .it.lg::before { display: none; } /* the 12px gap beside the track rule is too narrow: the mark reads as a hyphen */
 
   .foot { margin-top: 44px; }
   .foot .lbl { grid-column: 1 / -1; }
@@ -244,6 +284,12 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
         <p class="cap" id="res-cap"></p>
       </div>
     </div>
+    <div class="long g3" id="long">
+      <h3 class="lh"><span data-i18n="longH">Long-running</span><span class="legend only-m" aria-hidden="true"><span data-i18n="dev">Development</span><span data-i18n="res">Research</span></span></h3>
+      <div class="lcol dev" id="long-dev"></div>
+      <div class="lcol res" id="long-res"></div>
+      <div class="lcol all" id="long-all"></div>
+    </div>
     <div class="bylabel only-m"><span data-i18n="byYear">By year</span><span class="legend" aria-hidden="true"><span data-i18n="dev">Development</span><span data-i18n="res">Research</span></span></div>
     <div id="years"></div>
     <div class="g3 note-row"><p class="note" data-i18n="jcrNote">Journal metrics from JCR 2025.</p></div>
@@ -287,7 +333,8 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
       top: function (p, c) { return "Top\u00a0" + p + "% in " + c; },
       contact: "Contact", copy: "Copy", copied: "Copied", selected: "Selected",
       biz: "Moomoo Company · CEO Hwanmoo Yong · Business registration 427-35-01491",
-      openDetail: "Details", lang: "Language"
+      openDetail: "Details", lang: "Language",
+      longH: "Long-running", now: "now"
     },
     ko: {
       name: "용환무", nameAlt: "Hwanmoo Yong",
@@ -301,7 +348,8 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
       top: function (p, c) { return c + " 분야 상위\u00a0" + p + "%"; },
       contact: "연락처", copy: "복사", copied: "복사됨", selected: "선택됨",
       biz: "무무컴퍼니 · 대표 용환무 · 사업자등록번호 427-35-01491",
-      openDetail: "상세", lang: "언어"
+      openDetail: "상세", lang: "언어",
+      longH: "장기 프로젝트", now: "현재"
     }
   };
 
@@ -422,6 +470,27 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
 
   var lang = "en";
 
+  /* Period from p: "2021–25" = 2021 to 2025, "2023–" = ongoing (through NOW_Y).
+     Band scale: 2013.5 to the end of NOW_Y, so the 2014 label (centred on mid-2014 like the others) has room on the left. */
+  var NOW_Y = 2026, AX0 = 2013.5, AX1 = NOW_Y + 1, LONG_CAL = 3;
+  function span(it) {
+    var m = it.p && /^(\d{4})(–)?(\d{2}|\d{4})?$/.exec(it.p);
+    if (!m) return null;
+    var s = +m[1], open = !!m[2] && !m[3];
+    var e = m[3] ? (m[3].length === 2 ? s - s % 100 + +m[3] : +m[3]) : (open ? NOW_Y : s);
+    return { s: s, e: e, open: open };
+  }
+  /* Stable ids so band rows can link to their item in the year rail. */
+  DEV.forEach(function (it, i) { it.id = "w-dev-" + i; it.trk = "dev"; });
+  RES.forEach(function (it, i) { it.id = "w-res-" + i; it.trk = "res"; });
+  /* Long-running = spans 3+ calendar years (ongoing counted through NOW_Y). */
+  function isLong(it) { var sp = span(it); return !!sp && sp.e - sp.s + 1 >= LONG_CAL; }
+  /* Period text shared by the band and the year rail: "2023–now" for ongoing work. */
+  function periodHTML(it) {
+    var sp = span(it);
+    return esc(it.p) + (sp && sp.open ? "<span class=\"nw\">" + esc(T[lang].now) + "</span>" : "");
+  }
+
   function esc(s) {
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
@@ -456,10 +525,10 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
     }
     var r = c.r ? "<div class=\"r\">" + fmt(c.r) + "</div>" : "";
     var parts = [];
-    if (it.p && it.p !== String(it.y)) parts.push("<span class=\"when\">" + esc(it.p) + "</span>");
+    if (it.p && it.p !== String(it.y)) parts.push("<span class=\"when\">" + periodHTML(it) + "</span>");
     if (c.m) parts.push("<span>" + esc(c.m) + "</span>");
     var m = parts.length ? "<div class=\"m\">" + parts.join("<span aria-hidden=\"true\">·</span>") + "</div>" : "";
-    return "<li class=\"it\">" + head + r + m + "</li>";
+    return "<li class=\"it" + (isLong(it) ? " lg" : "") + "\" id=\"" + it.id + "\">" + head + r + m + "</li>";
   }
 
   function renderYears() {
@@ -476,6 +545,30 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
       html += "</div>";
     });
     document.getElementById("years").innerHTML = html;
+  }
+
+  function renderLong() {
+    var L = T[lang];
+    function pct(v) { return (100 * (v - AX0) / (AX1 - AX0)).toFixed(2) + "%"; }
+    var axis = "<div class=\"axis\" aria-hidden=\"true\">" +
+      [2014, 2017, 2020, 2023].map(function (y) { return "<span style=\"left:" + pct(y + 0.5) + "\">" + y + "</span>"; }).join("") +
+      "<span style=\"left:100%\">" + esc(L.now) + "</span></div>";
+    function row(it) {
+      var sp = span(it), x0 = sp.s + 0.5, x1 = sp.open ? AX1 : sp.e + 0.5;
+      return "<li class=\"lr " + it.trk + "\"><a class=\"lt\" href=\"#" + it.id + "\">" + esc(it[lang].t) + "</a>" +
+        "<span class=\"when\">" + periodHTML(it) + "</span>" +
+        "<span class=\"lb\" aria-hidden=\"true\"><i" + (sp.open ? " class=\"open\"" : "") + " style=\"left:" + pct(x0) + ";width:" + (100 * (x1 - x0) / (AX1 - AX0)).toFixed(2) + "%\"></i></span></li>";
+    }
+    function list(items, label) {
+      return axis + "<ul class=\"lrs\" aria-label=\"" + esc(label) + "\">" + items.map(row).join("") + "</ul>";
+    }
+    var dev = DEV.filter(isLong);
+    var res = RES.filter(isLong);
+    var all = dev.concat(res).map(function (it, i) { return { it: it, i: i }; })
+      .sort(function (a, b) { return (b.it.y - a.it.y) || (a.i - b.i); }).map(function (o) { return o.it; });
+    document.getElementById("long-dev").innerHTML = list(dev, L.longH + " · " + L.dev);
+    document.getElementById("long-res").innerHTML = list(res, L.longH + " · " + L.res);
+    document.getElementById("long-all").innerHTML = list(all, L.longH);
   }
 
   function renderFigs() {
@@ -513,6 +606,7 @@ h1 .alt { margin-left: 12px; font-size: 16px; font-weight: 400; letter-spacing: 
     });
     document.querySelector(".lang").setAttribute("aria-label", L.lang);
     renderFigs();
+    renderLong();
     renderYears();
     if (save) { try { localStorage.setItem("yong.lang", l); } catch (e) {} }
   }
