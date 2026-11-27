@@ -1,0 +1,380 @@
+# Hwanmoo Yong, Ph.D. (용환무)
+
+> CEO of Moomoo Company and CTO of Funeasy, with a Yonsei Ph.D. Builds apps and backends (10+ years) and now LLM automation. Researches deep RL and neural networks.
+
+## Profile
+
+- Now: CEO, Moomoo Company (2025–)
+- Now: CTO, Funeasy (2023–)
+- Education: Ph.D., M.S. and B.S. in Mechanical Engineering, Yonsei University
+- Teaching: Lecturer in Mechanical Engineering, Yonsei University (2022–23). Graduate course: Optimal Control and Reinforcement Learning
+- Based in: Seoul, South Korea
+
+## Expertise
+
+- Development: iOS/Android apps, large-scale backends, LLM automation, low-latency Rust systems
+- Research: Deep reinforcement learning, neural networks, vehicle dynamics and control, state estimation
+
+## Development projects
+
+10+ years building production software · 20+ software projects delivered
+
+- [Multilingual email automation on a private LLM for a freight forwarder](https://hwanmoo.yong.phd/work/freight-mail-automation/): 2026 · Sole engineer, end to end · Cuts outgoing email work by an estimated 30–47%
+- [Campaign settlement platform](https://hwanmoo.yong.phd/work/campaign-settlement/): 2026–now · Participant app, customer portal and admin tool on one settlement engine
+- [Campaign distribution and settlement hub](https://hwanmoo.yong.phd/work/campaign-distribution-hub/): 2026–now · Routes campaign volume to multiple partner channels and settles it automatically
+- [Rust systems for high-frequency trading on Solana](https://hwanmoo.yong.phd/work/solana-transaction-infra/): 2025 · Millisecond transaction relay, deployed on mainnet across multiple overseas regions
+- [Company-wide ERP for a music rights firm](https://hwanmoo.yong.phd/work/music-royalty-erp/): 2023–now · Sole engineer, end to end · Automated royalty statements and settlement
+- [Mobile rewards app and platform](https://hwanmoo.yong.phd/work/rewards-platform/): 2023–now · iOS/Android app, backend and back office · Ledger of hundreds of millions of transactions
+- [Cardiac imaging AI service](https://hwanmoo.yong.phd/work/cardiac-imaging-ai/): 2023 · Sole developer · Built the AI analysis server, app and website
+- [Referral and patient-record services for a major hospital's research team](https://hwanmoo.yong.phd/work/hospital-clinical-services/): 2021–25 · Sole developer · Mobile apps, web apps and servers, with medical-device integration
+- [Repeat-purchase commerce app and platform](https://hwanmoo.yong.phd/work/reorder-commerce/): 2020–23 · Co-founder · app and backend development · Built everything, from the iOS/Android app to payments and delivery tracking
+- [Paid membership platform](https://hwanmoo.yong.phd/work/paid-membership-platform/): 2020–21 · From payments and automated messaging to retention and revenue analytics
+- [Custom-fit ordering with AI sizing from phone video](https://hwanmoo.yong.phd/work/ai-sizing-custom-orders/): 2020–21
+- [Back office and in-house commerce platform for an eyewear store network](https://hwanmoo.yong.phd/work/eyewear-retail-platform/): 2018–20 · From customer requests to settlement, across hundreds of stores
+- [Corporate travel management platform](https://hwanmoo.yong.phd/work/corporate-travel-platform/): 2017–18 · Integrated with global airline reservation systems
+- Multi-party scheduling app: 2015–17
+- Student and grade management system for after-school academies: 2014–16
+
+## Research projects
+
+6 industry and government R&D projects
+
+- [AI test driver for next-generation steering systems](https://hwanmoo.yong.phd/work/steering-ai-test-driver/): 2023–24 · with an auto parts maker · technical lead · Deep RL drivers handle limit maneuvers reliably in simulation; delivered to the client
+- [Unsupervised clustering of ocean sensor data](https://hwanmoo.yong.phd/work/ocean-sensor-clustering/): 2023 · Research contract
+- [Neural-network vehicle state estimation from low-cost sensors](https://hwanmoo.yong.phd/work/vehicle-state-estimation/): 2021 · A recurrent neural network recovers speed and displacement from inertial sensors alone
+- [Semi-active suspension control with deep reinforcement learning](https://hwanmoo.yong.phd/work/learned-suspension/): 2019–20 · with an automaker · Controller trained and road-tested on a real car
+- [Computing a production line's operating rules as an optimal policy](https://hwanmoo.yong.phd/work/manufacturing-rule-synthesis/): 2019–20 · with a manufacturing-equipment company · Verified running on a real controller
+- [Customer-aware AI attendant robot for VR simulators](https://hwanmoo.yong.phd/work/vr-attendant-robot/): 2017–18 · Government R&D · Field-tested with hundreds of visitors; the robot significantly raised satisfaction
+
+## Publications
+
+4 SCI(E) journal papers, 2 as first author, 1 as co-first author
+
+- [IEEE Transactions on Industrial Electronics](https://doi.org/10.1109/TIE.2022.3153805): first author, 2023
+- [Nonlinear Dynamics](https://doi.org/10.1007/s11071-021-06598-7): first author, 2021
+- [Physics Letters A](https://doi.org/10.1016/j.physleta.2020.127005): co-author, 2021
+- [IEEE Transactions on Automation Science and Engineering](https://doi.org/10.1109/TASE.2020.2980305): co-first author, 2020
+
+## Patents
+
+4 patents granted as co-inventor
+
+- VR simulator control method using emotional state estimation (2023)
+- Method for estimating integrable physical quantities using an artificial neural network (2023)
+- Concierge robot and method of providing personalized service using the same (2021)
+- Suspension control system based on reinforcement learning (2020)
+
+## Project pages
+
+### Multilingual email automation on a private LLM for a freight forwarder
+
+URL: https://hwanmoo.yong.phd/work/freight-mail-automation/
+Korean: https://hwanmoo.yong.phd/ko/work/freight-mail-automation/
+
+Development · 2026 · Sole engineer, end to end
+
+- 30–47% less outgoing email work (estimated)
+- ~18,000 emails sorted by task in live use
+- 1/6–1/9 of the cost of cloud AI for mail analysis (modeled)
+
+An international freight forwarder ran its operations on email, trading hundreds of messages a day in multiple languages with customers, carriers and other partners. Staff read every one, worked out what it meant for the order in question and replied by hand. Nearly half of what they sent was a standard template reply.
+
+I designed and built the whole LLM pipeline, from mail intake to a side panel beside the staff's existing in-house system. It pieces each conversation back together, picks out every request and sorts it by task in light of earlier emails. The same email always gets the same answer, and a request the system cannot back with evidence goes to staff instead of getting a made-up answer.
+
+Every model runs on servers dedicated to the client, so no email ever goes to a cloud AI service. A language model reads the mail, and models I trained on the client's own mail make the decisions. Accuracy is checked against past orders the system has never seen.
+
+In live use, the system read and sorted about 18,000 of the client's emails by task, with labels typically on screen a minute or so after an email arrived. An analysis of one week of real orders estimated a 30% cut in outgoing email work, or up to 47% once two complex order flows are standardized. At 100,000 emails a month, mail analysis was modeled at one-sixth to one-ninth the cost of cloud AI.
+
+### Campaign settlement platform
+
+URL: https://hwanmoo.yong.phd/work/campaign-settlement/
+Korean: https://hwanmoo.yong.phd/ko/work/campaign-settlement/
+
+Development · 2026–now · Platform architecture, backend and operations
+
+Customers fund campaigns, many independent participants carry them out, and this platform settles the money between them. Every approved task ends in a payout, so each submission has to be checked before money moves. Manual review cannot keep up as volume grows, and every wrong approval is money out the door.
+
+I designed the platform around a single settlement engine and led its backend development. A participant app, a self-serve customer portal and an internal admin tool all run on that engine. Before any payout, the platform reads and verifies the submitted evidence automatically.
+
+Every movement of money is recorded in one double-entry ledger, where entries are only ever added, never edited. Any balance traces back to the exact transactions behind it. An integrity audit cross-checks balances against those transactions.
+
+The same engine later grew to support a multi-tier partner network that resells campaigns. The platform is live, and every payout to participants settles through that one ledger.
+
+### Campaign distribution and settlement hub
+
+URL: https://hwanmoo.yong.phd/work/campaign-distribution-hub/
+Korean: https://hwanmoo.yong.phd/ko/work/campaign-distribution-hub/
+
+Development · 2026–now · B2B platform for a mobile services company
+
+This hub routes prepaid campaigns to multiple partner channels at once and settles every completion. Each completion moves money, so every number has to match, from the advertiser's prepaid balance to each partner's settlement. Yet the same completion report can arrive more than once, and outside networks keep books of their own.
+
+I designed and built the whole hub: an advertiser console, a partner API and portal secured by signed requests, and two-way integrations with outside networks. Advertisers work in tiered accounts, from head office through agencies down to sellers, and every campaign draws on a prepaid balance. Volume is reserved before it is handed out, so even a burst of simultaneous requests cannot overdraw a campaign.
+
+Each completion is verified before it draws down any volume, and it is counted exactly once, however many times it arrives. It is then posted to the settlement ledger, where any correction goes in as a reversing entry and past entries stay untouched. Results from outside networks are kept apart and reconciled against that ledger, and the advertiser is refunded automatically for any unfilled volume.
+
+Operators can shift volume between partners midday or set tomorrow's split in advance, without touching anything already completed or in progress. Pulling volume back from an outside network first pauses delivery there and reconciles its results, so only the true remainder is reassigned. The hub is live, and the numbers line up from the advertiser's prepaid balance to each partner's settlement.
+
+### Rust systems for high-frequency trading on Solana
+
+URL: https://hwanmoo.yong.phd/work/solana-transaction-infra/
+Korean: https://hwanmoo.yong.phd/ko/work/solana-transaction-infra/
+
+Development · 2025 · Architecture, Rust core development and infrastructure
+
+High-frequency trading on Solana is won or lost in milliseconds. A block closes about every 400 milliseconds, so a transaction that reaches the block producer late misses that block. I built the relay that carries transactions to the block producer and the trading engine that runs on top of it, both in Rust.
+
+I designed the architecture and wrote the core components myself. A custom relay and a proxy sit between users and the validator, checking each incoming transaction, ranking it and passing it on within milliseconds. The trading engine draws on transaction data shared across relays in multiple regions and sends its trades to the block producer as bundles.
+
+Every step had to finish well within a single block time. I reworked the relay's internal data flow and network connections, taking waits, memory copies and buffering delays off the critical path. On a private test cluster of several validators, blocks built through the relay consistently carried more fees than blocks from the standard validator software.
+
+I built and ran the infrastructure on dedicated servers in multiple overseas regions. From those servers, the system ran on Solana's mainnet, handling live transactions.
+
+### Company-wide ERP for a music rights firm
+
+URL: https://hwanmoo.yong.phd/work/music-royalty-erp/
+Korean: https://hwanmoo.yong.phd/ko/work/music-royalty-erp/
+
+Development · 2023–now · Sole engineer, end to end
+
+- 4,000,000+ usage rows settled per payout cycle
+- 40,000,000+ rows in the usage ledger
+
+The client manages rights to millions of tracks and pays royalties to many rights holders. Every payout cycle brings in millions of rows of usage data from collecting societies, and each source spells track and label names its own way. One wrong match sends money to the wrong rights holder.
+
+I built one system that takes every usage report from upload through track matching and settlement to a finished statement. Matching finds the right track even when titles and label names vary, and flags any match it cannot confirm for human review.
+
+The hard part is keeping payouts correct across a ledger of tens of millions of rows. An interrupted import can be rerun without creating duplicates. The rules that assign each row to its rights holder are isolated from the rest of the code, so a change elsewhere cannot shift a payout.
+
+Royalty statements and settlement are now automated. Each cycle is settled inside the system, and every rights holder's statement goes out in a single run. Contracts, sales and production run on the same data too, so the system has become the ERP the whole company uses every day.
+
+### Mobile rewards app and platform
+
+URL: https://hwanmoo.yong.phd/work/rewards-platform/
+Korean: https://hwanmoo.yong.phd/ko/work/rewards-platform/
+
+Development · 2023–now · iOS/Android app, backend and back office
+
+- 200,000,000+ transactions in the ledger
+
+Users earn points for short tasks in a mobile app, and those points are money. They can be exchanged for goods or cash equivalents, so a single duplicated or missing entry is a financial error. I built the whole service, from the iOS and Android app to the backend and back office.
+
+The app runs on iOS and Android from one Flutter codebase. Push notifications are triggered by each user's own activity, capped in frequency and tracked through to participation. Usage events wait in an on-device queue until the server receives them, so none are lost when the connection drops.
+
+Business customers that supply the tasks run their own campaigns from a self-serve portal, and partner apps show the same tasks to their users through an integration API. The operations team works in a back office that scopes permissions by role, resource and action, and logs who changed what. Even when claims pour in at once, first-come, first-served rewards stop exactly at their limit, and repeat entries and reused proof images are caught automatically.
+
+The heaviest request is also the most frequent: each time the app opens, the server checks every listed task against that user's limits, so I made it load every cooldown and participation count in a single batch. As the ledger grew to hundreds of millions of transactions, I stored past years' records separately from recent ones and made slow analytical queries read only the range they need. All of this was done without taking the service down.
+
+### Cardiac imaging AI service
+
+URL: https://hwanmoo.yong.phd/work/cardiac-imaging-ai/
+Korean: https://hwanmoo.yong.phd/ko/work/cardiac-imaging-ai/
+
+Development · 2023 · Medical AI company · sole developer
+
+The client's research team had built an AI system that analyzes cardiac scans, and they wanted it available in a phone app and on the web. A deep learning model picks out the structures that matter and renders them in 3D, and a second model predicts a key indicator from the scan and patient data. But one patient's scan runs to hundreds of images, and the analysis is too heavy for a phone or a browser.
+
+I built the service around these models. It has three parts: an AI server that runs the analysis, a phone app and website built from one Flutter codebase, and a cloud admin server. The admin server controls who can sign in and keeps each patient's inputs, results and 3D model for later review.
+
+The core challenge was turning research code into an engine that runs on a server. The analysis was tangled up with the research program's user interface, so I traced each step's inputs and outputs and rebuilt it as a standalone inference engine. The engine takes a patient's full image set from the app or the web and returns a finished 3D model to render on screen.
+
+The research team's AI shipped as a phone app and a web service and went into real-world use. All the heavy GPU work stays on the AI server, so even a phone gets the full analysis.
+
+### Referral and patient-record services for a major hospital's research team
+
+URL: https://hwanmoo.yong.phd/work/hospital-clinical-services/
+Korean: https://hwanmoo.yong.phd/ko/work/hospital-clinical-services/
+
+Development · 2021–25 · Sole developer
+
+A major hospital's research team needed software to connect its clinicians with outside clinics and with patients at home. Clinics refer patients or ask for advice, and patients send in readings they take themselves. I took on three services for this, all of which handled patient data and had to outlive the studies behind them.
+
+I built the whole referral platform from scratch: phone and web apps, plus a server for real-time chat and alerts. When a clinic submits a case with patient details, signed consent and imaging, the hospital accepts it and schedules the procedure. The platform verifies patient identity, and only the attending physician can act on a case; the rest of the team has view-only access.
+
+For consultations, I took over a live service and migrated it to new servers. I restructured its database and backend, then added a back office and a new mobile app.
+
+For patients, I built an app that talks directly to a dedicated measuring device through the maker's own data protocol. Patients note where it hurts and how badly, then choose readings to send, and clinicians review them in a console on a records server I also built. The app shows the delivery status of each reading, so patients know exactly what has reached their clinicians.
+
+### Repeat-purchase commerce app and platform
+
+URL: https://hwanmoo.yong.phd/work/reorder-commerce/
+Korean: https://hwanmoo.yong.phd/ko/work/reorder-commerce/
+
+Development · 2020–23 · Co-founder · app and backend development
+
+This commerce service let customers reorder the everyday goods they buy again and again, from a single screen, paying with a saved card. Behind that one screen sat real card charges, limited-stock sales hit by simultaneous orders, and carriers that each reported delivery differently. I built the whole service, from the customer iOS and Android app to the backend.
+
+The app shipped to iOS and Android from a single Flutter codebase. To register a card, customers pointed their phone's camera at it, and on-device text recognition read the number. One backend served the app and website, the admin tools, and a portal where sellers managed their own products, orders and settlement.
+
+I also built the tools we used to decide what to sell, when and to whom. An operations dashboard tracked users, orders and repeat-purchase rates by day and month, and its numbers set the timing and audience of each push. A daily price monitor flagged products whose margin fell below a set floor, and automated ordering let us test demand before signing a supply contract.
+
+Every order moved real money and real goods, so correctness came first. Limited-stock sales could not oversell even when orders landed all at once, and an hourly job pulled tracking updates from every carrier into each order's status. With scheduled pushes, store-credit payouts and daily statistics also automated, the platform ran live for years.
+
+### Paid membership platform
+
+URL: https://hwanmoo.yong.phd/work/paid-membership-platform/
+Korean: https://hwanmoo.yong.phd/ko/work/paid-membership-platform/
+
+Development · 2020–21 · Architecture, development and operations
+
+The client, a startup, sold paid memberships: each member joined a group that met on a regular schedule, in person or online. Unlike students in a class with a fixed timetable, members could swap into other sessions, move between groups, or pause and come back. Every one of those moves touched payments, attendance and the messages a member should receive.
+
+I designed, built and ran the entire platform. Members paid by card, recurring billing or bank transfer, on the web or in a mobile app I shipped. Text messages and messaging-app notifications went out automatically at set times, from payment confirmations to day-before reminders and expiry notices.
+
+Money and membership had to stay in step: each swap, group move or pause recalculated the member's remaining sessions at once. Payments came through more than one provider, so every refund, full or partial, had to go back through the provider that took the payment. When the product lineup was restructured, I redesigned the data model and rebuilt the platform.
+
+The admin tool that operators used every day also tracked the health of the business. It recomputed each member's monthly status from payment and attendance history to show monthly recurring revenue, cohort retention and customer lifetime value. From first payment to revenue analytics, the client's membership business ran on this platform.
+
+### Custom-fit ordering with AI sizing from phone video
+
+URL: https://hwanmoo.yong.phd/work/ai-sizing-custom-orders/
+Korean: https://hwanmoo.yong.phd/ko/work/ai-sizing-custom-orders/
+
+Development · 2020–21 · Startup client · product and engineering lead
+
+A company making custom-fit products wanted customers to measure themselves at home with a phone, then order to those measurements. Sizes vary from person to person, and products bought online without a measurement often do not fit. A photo also has no sense of scale: the same object looks bigger or smaller depending on how far away the camera is.
+
+I designed the service and its capture flow, built the vision system that finds what to measure and the server behind it, and co-developed the web shop. The customer sets an everyday object of known size beside what is being measured and films both with the phone camera, right in the browser. An object-detection model on the server finds that object and each part to be measured, and the server converts each part's width and length into millimeters using the object's known size.
+
+No order can reach the maker without a usable measurement. Measuring is a step in checkout, which moves on only once the system has found the reference object and every part. A failed capture is reshot on the spot, and the measurements are saved with each order, so operators can pick the right size.
+
+The finished service went live as a full mobile shop with payment, order lookup and a back office. The client used it for market research and in demos to validate the business. It was built to run entirely in a phone's browser with nothing to install, so a customer can go from measuring to ordering in one flow.
+
+### Back office and in-house commerce platform for an eyewear store network
+
+URL: https://hwanmoo.yong.phd/work/eyewear-retail-platform/
+Korean: https://hwanmoo.yong.phd/ko/work/eyewear-retail-platform/
+
+Development · 2018–20 · Head of technology
+
+An eyewear company let customers order online and pick up at a nearby store, but head office ran its store network on email and spreadsheets. Staff retyped every customer request and messaged each store one at a time. Orders from outside sales channels also had to be sorted by store, and their addresses were written inconsistently.
+
+I designed and built one back office shared by head office and every store. Customer requests landed in it automatically, channel orders reached the right store even when an address was written differently, and alerts went out on their own. Monthly settlement ran there too: stores paid once head office confirmed the amount, cancellations were reversed and unpaid balances carried over to the next month.
+
+The online shop was the harder part: it ran on a hosted platform that never told outside systems when a payment went through. I traced its payment code and found a way to detect completed payments from outside, so each one was recorded in the back office and triggered its alerts. I then built the company's own commerce platform, with customer accounts, booking and a store finder.
+
+From customer intake to monthly settlement, the back office ran the work of hundreds of stores. Outside suppliers handled their own orders in it too. The company went on to move one of its online shops off the hosted platform and onto the one I built.
+
+### Corporate travel management platform
+
+URL: https://hwanmoo.yong.phd/work/corporate-travel-platform/
+Korean: https://hwanmoo.yong.phd/ko/work/corporate-travel-platform/
+
+Development · 2017–18 · Travel agency · product and engineering lead
+
+A travel agency that managed business travel for corporate clients ran most of the work on phone calls, email and spreadsheets. Agents looked up flights in a reservation system, emailed the options and handled each client's payment terms and invoices by hand. Flights are searched and booked through the global airline reservation systems that agencies worldwide share, which are thinly documented and do not fit local payment rules.
+
+I designed and built one web service, with separate traveler and agency views, that takes each trip from request through approval to invoice. A traveler asks for flights, a hotel and a rental car in a single request, and agents propose itineraries built from reservation-system searches. Booking confirmations that arrive by email are filed under the right trip automatically, alongside each client's payment terms, fees and invoices.
+
+I set the scope of automation to fit local payment rules: the service handles search, proposal and confirmation, and agents issue the tickets. I then extended the platform into the agency's back office, where multiple reservation systems deliver ticket files every day, each in its own format. I designed a database that tracks each ticket, with its reissues, refunds and fees, as a single record, and wrote the parser that feeds it.
+
+The travel service went into production and opened in beta to the agency's corporate clients. In the back office, ticket upload, search and report export were deployed, bringing ticket data from multiple global reservation systems into one place.
+
+### AI test driver for next-generation steering systems
+
+URL: https://hwanmoo.yong.phd/work/steering-ai-test-driver/
+Korean: https://hwanmoo.yong.phd/ko/work/steering-ai-test-driver/
+
+Research · 2023–24 · with an auto parts maker · technical lead
+
+- ~40% lower peak lateral acceleration than the standard driver at the same slalom pace
+
+A new steering system is evaluated in simulation before it ever goes into a real car, and the verdict depends on who is driving. Limit maneuvers such as a slalom or an emergency lane change must be driven precisely and identically on every run. In those maneuvers the simulator's standard driver model swayed the car too much, so when a run went badly, no one could tell whether the steering or the driver was to blame.
+
+Off-the-shelf vehicle simulators are not built for AI training, so I first turned one into a deep reinforcement learning environment. Because learning takes countless test drives, I built it for distributed training: simulator instances run in parallel across machines, each exchanging data with the training code in real time. Every driver learns there by trial and error and is scored on a suite of limit-maneuver tests.
+
+In this environment we developed two kinds of AI driver. One is a Soft Actor-Critic policy that steers the car directly; in the other, a path-following controller drives while a learned policy retunes its settings moment by moment. We also tested imitation learning from existing controllers' driving data, so a driver does not have to start from scratch when conditions change.
+
+In simulation the AI drivers handle limit maneuvers steadily, and the client received them together with the training environment. On the same slalom at the same pace as the standard driver, the direct-steering driver swayed the car far less: its peak lateral acceleration was nearly 40% lower.
+
+### Unsupervised clustering of ocean sensor data
+
+URL: https://hwanmoo.yong.phd/work/ocean-sensor-clustering/
+Korean: https://hwanmoo.yong.phd/ko/work/ocean-sensor-clustering/
+
+Research · 2023 · Research contract
+
+A marine research team uses mobile instruments at sea to record temperature, salinity and pressure at many depths, along with each reading's position. Seawater is layered into water masses with distinct properties, and the team wanted the data itself to reveal them. But there is no answer key, and the variables in every reading depend on one another.
+
+I built the whole analysis, from raw instrument files to the final 3D map. A converter turns files in the instrument's own format into clean tables. Principal component analysis then reduces the variables to a few key axes, and a Gaussian mixture model groups water with similar properties.
+
+The key question was which groups count as meaningful water masses. Before writing any code, I reviewed published oceanographic studies and based the method on them. The analysis is designed for real field records, where readings thin out with depth and some have no position.
+
+The result is a 3D map of position and depth that researchers can rotate in a browser, with each group in its own color. It shows how their observations divide into distinct water masses, found from the data alone, with no answer key.
+
+### Neural-network vehicle state estimation from low-cost sensors
+
+URL: https://hwanmoo.yong.phd/work/vehicle-state-estimation/
+Korean: https://hwanmoo.yong.phd/ko/work/vehicle-state-estimation/
+
+Research · 2021
+
+- 148.8× lower mean squared error than a conventional filter-based estimator (in simulation)
+
+Advanced suspension control needs to know, at every moment, how fast and how far the car's body and wheels are moving. Sensors that measure speed and displacement directly are too expensive for production cars, which make do with low-cost accelerometers and gyros. Integrating those signals should recover the missing values, but small errors accumulate and the estimate soon drifts from reality.
+
+I developed an estimator that recovers speed and displacement from accelerometer and gyro signals alone. Its LSTM network, which reads the recent history of sensor signals, was trained on a nonlinear simulation of the whole car driving over many random roads. The simulation provides ground truth that a production car can never measure; on the road, the estimator needs only the low-cost sensors.
+
+From these sensors alone, classical estimators cannot pin down the car's full state. The network fills that gap with what it learned in simulation, and an extended Kalman filter then reconciles each estimate with the car's equations of motion. As a result, errors do not build up, and in simulation a suspension controller fed these estimates performed almost as well as one given perfect measurements.
+
+In simulation, the learned estimator reduced mean squared error by a factor of 148.8 compared with a conventional filter-based estimator. The work was published in Nonlinear Dynamics, with me as first author. I am also co-inventor on a granted patent for the method, "Method for estimating integrable physical quantities using an artificial neural network."
+
+### Semi-active suspension control with deep reinforcement learning
+
+URL: https://hwanmoo.yong.phd/work/learned-suspension/
+Korean: https://hwanmoo.yong.phd/ko/work/learned-suspension/
+
+Research · 2019–20 · with an automaker
+
+A fixed suspension tune is always a compromise: what absorbs a sharp bump is wrong for a rough road. A semi-active suspension can adjust its dampers while the car drives, but the hand-written rules the industry relies on struggle when the road changes. An automaker asked whether a controller could learn the job itself through deep reinforcement learning, using only the low-cost accelerometers a production car can carry.
+
+I split the problem by road type, because ordinary roads and sharp impacts call for very different reward functions. I trained a separate Soft Actor-Critic controller for each, and a detector that watches the body's motion for impacts switches smoothly between them. Training also modeled a real damper's limits: it can only absorb energy, and it responds with a lag.
+
+The ordinary-road controller was trained and tested on a real car, not on a simplified model like the demo above. I built the in-car training software, which updated the controller on the spot from data logged while driving and blended in a rule-based controller to keep early learning safe. In a comparison drive, the learned controller cut the body's front-to-back rocking (pitch) by nearly a quarter compared with fixed dampers, more than the rule-based controller achieved on its own.
+
+The work was published in IEEE Transactions on Industrial Electronics, with me as first author. I am also co-inventor on a granted patent, "Suspension control system based on reinforcement learning."
+
+### Computing a production line's operating rules as an optimal policy
+
+URL: https://hwanmoo.yong.phd/work/manufacturing-rule-synthesis/
+Korean: https://hwanmoo.yong.phd/ko/work/manufacturing-rule-synthesis/
+
+Research · 2019–20 · with a manufacturing-equipment company
+
+On a production line, operating rules decide which station each product carrier visits next and when it has to wait. Engineers have long written these rules by hand from experience, and on a large line they grow so tangled that output depends on who wrote them. A manufacturing-equipment company commissioned research into having AI design them instead.
+
+I designed a two-layer architecture: an AI layer decides where each carrier goes, and the line's existing controller moves it. We modeled every state the line can be in and the moves allowed from each, then used dynamic programming to compute an optimal policy: the best move in every situation. Safety conditions are built into the model itself, so the computed rules contain only safe moves.
+
+Each added station multiplies the state space, so solving a whole line at once is impractical. I split the line into sections solved separately and measured the trade-off: computing time fell sharply at a modest cost in throughput. For lines too large to solve exactly, I built a deep reinforcement learning environment where an agent learns the same decisions by trial and error.
+
+Connected to a real controller, the computed rules guided every carrier through all of its stations and off the line. This showed that operating rules once written by hand for each line can instead be computed from the line's layout.
+
+### Customer-aware AI attendant robot for VR simulators
+
+URL: https://hwanmoo.yong.phd/work/vr-attendant-robot/
+Korean: https://hwanmoo.yong.phd/ko/work/vr-attendant-robot/
+
+Research · 2017–18 · Government R&D
+
+Labor is a major cost in a VR simulator venue, where every machine needs staff to seat riders, check they are ready and start each game. We built an AI robot that takes over this work, speaks to each customer personally and even gives live commentary on their drive. The game was a commercial title with no interface for training, so in a live venue the robot had to read every situation in real time from the game's driving data alone.
+
+From its cameras, the robot estimates each rider's gender and age group, and once the rider sits down and grips the wheel, it starts the game on its own. Convolutional neural networks trained on public face datasets misjudged local customers' gender and age, so we retrained them on a dataset of local faces. The headset hides the upper face, so I developed a way to estimate emotion from the lower face alone, and that work led to a patent on simulator control.
+
+During the drive, the robot reads the game's live data and calls chases, overtakes and collisions in a voice and tone chosen for that rider. I was the main developer of the venue software: its servers and data pipeline, the commentary logic, and the robot and remote-operator links. Real-time decisions run on an on-site server so the commentary keeps pace with the drive, while the cloud stores video and game data and retrains the models.
+
+In a field test at a live VR venue with hundreds of visitors, those who heard the robot were significantly more satisfied. The study was published in IEEE Transactions on Automation Science and Engineering, with me as co-first author. Two granted patents followed, both with me as co-inventor: "Concierge robot and method of providing personalized service using the same" and "VR simulator control method using emotional state estimation."
+
+## Contact
+
+- Email: hwanmoo@yong.phd
+- GitHub: https://github.com/codemoo
+- Google Scholar: https://scholar.google.com/citations?user=ZsskQO4AAAAJ
+
+## Languages
+
+- English: https://hwanmoo.yong.phd/
+- Korean: https://hwanmoo.yong.phd/ko/
+
+## Citing
+
+The canonical domain is hwanmoo.yong.phd. Link to the page you draw on: the home (https://hwanmoo.yong.phd/) or a project's own page, linked above. Each page also has a Korean version under /ko/.

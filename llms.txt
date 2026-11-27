@@ -1,0 +1,80 @@
+# Hwanmoo Yong, Ph.D. (용환무)
+
+> CEO of Moomoo Company and CTO of Funeasy, with a Yonsei Ph.D. Builds apps and backends (10+ years) and now LLM automation. Researches deep RL and neural networks.
+
+## Profile
+
+- Now: CEO, Moomoo Company (2025–)
+- Now: CTO, Funeasy (2023–)
+- Education: Ph.D., M.S. and B.S. in Mechanical Engineering, Yonsei University
+- Teaching: Lecturer in Mechanical Engineering, Yonsei University (2022–23). Graduate course: Optimal Control and Reinforcement Learning
+- Based in: Seoul, South Korea
+
+## Expertise
+
+- Development: iOS/Android apps, large-scale backends, LLM automation, low-latency Rust systems
+- Research: Deep reinforcement learning, neural networks, vehicle dynamics and control, state estimation
+
+## Development projects
+
+10+ years building production software · 20+ software projects delivered
+
+- [Multilingual email automation on a private LLM for a freight forwarder](https://hwanmoo.yong.phd/work/freight-mail-automation/): 2026 · Sole engineer, end to end · Cuts outgoing email work by an estimated 30–47%
+- [Campaign settlement platform](https://hwanmoo.yong.phd/work/campaign-settlement/): 2026–now · Participant app, customer portal and admin tool on one settlement engine
+- [Campaign distribution and settlement hub](https://hwanmoo.yong.phd/work/campaign-distribution-hub/): 2026–now · Routes campaign volume to multiple partner channels and settles it automatically
+- [Rust systems for high-frequency trading on Solana](https://hwanmoo.yong.phd/work/solana-transaction-infra/): 2025 · Millisecond transaction relay, deployed on mainnet across multiple overseas regions
+- [Company-wide ERP for a music rights firm](https://hwanmoo.yong.phd/work/music-royalty-erp/): 2023–now · Sole engineer, end to end · Automated royalty statements and settlement
+- [Mobile rewards app and platform](https://hwanmoo.yong.phd/work/rewards-platform/): 2023–now · iOS/Android app, backend and back office · Ledger of hundreds of millions of transactions
+- [Cardiac imaging AI service](https://hwanmoo.yong.phd/work/cardiac-imaging-ai/): 2023 · Sole developer · Built the AI analysis server, app and website
+- [Referral and patient-record services for a major hospital's research team](https://hwanmoo.yong.phd/work/hospital-clinical-services/): 2021–25 · Sole developer · Mobile apps, web apps and servers, with medical-device integration
+- [Repeat-purchase commerce app and platform](https://hwanmoo.yong.phd/work/reorder-commerce/): 2020–23 · Co-founder · app and backend development · Built everything, from the iOS/Android app to payments and delivery tracking
+- [Paid membership platform](https://hwanmoo.yong.phd/work/paid-membership-platform/): 2020–21 · From payments and automated messaging to retention and revenue analytics
+- [Custom-fit ordering with AI sizing from phone video](https://hwanmoo.yong.phd/work/ai-sizing-custom-orders/): 2020–21
+- [Back office and in-house commerce platform for an eyewear store network](https://hwanmoo.yong.phd/work/eyewear-retail-platform/): 2018–20 · From customer requests to settlement, across hundreds of stores
+- [Corporate travel management platform](https://hwanmoo.yong.phd/work/corporate-travel-platform/): 2017–18 · Integrated with global airline reservation systems
+- Multi-party scheduling app: 2015–17
+- Student and grade management system for after-school academies: 2014–16
+
+## Research projects
+
+6 industry and government R&D projects
+
+- [AI test driver for next-generation steering systems](https://hwanmoo.yong.phd/work/steering-ai-test-driver/): 2023–24 · with an auto parts maker · technical lead · Deep RL drivers handle limit maneuvers reliably in simulation; delivered to the client
+- [Unsupervised clustering of ocean sensor data](https://hwanmoo.yong.phd/work/ocean-sensor-clustering/): 2023 · Research contract
+- [Neural-network vehicle state estimation from low-cost sensors](https://hwanmoo.yong.phd/work/vehicle-state-estimation/): 2021 · A recurrent neural network recovers speed and displacement from inertial sensors alone
+- [Semi-active suspension control with deep reinforcement learning](https://hwanmoo.yong.phd/work/learned-suspension/): 2019–20 · with an automaker · Controller trained and road-tested on a real car
+- [Computing a production line's operating rules as an optimal policy](https://hwanmoo.yong.phd/work/manufacturing-rule-synthesis/): 2019–20 · with a manufacturing-equipment company · Verified running on a real controller
+- [Customer-aware AI attendant robot for VR simulators](https://hwanmoo.yong.phd/work/vr-attendant-robot/): 2017–18 · Government R&D · Field-tested with hundreds of visitors; the robot significantly raised satisfaction
+
+## Publications
+
+4 SCI(E) journal papers, 2 as first author, 1 as co-first author
+
+- [IEEE Transactions on Industrial Electronics](https://doi.org/10.1109/TIE.2022.3153805): first author, 2023
+- [Nonlinear Dynamics](https://doi.org/10.1007/s11071-021-06598-7): first author, 2021
+- [Physics Letters A](https://doi.org/10.1016/j.physleta.2020.127005): co-author, 2021
+- [IEEE Transactions on Automation Science and Engineering](https://doi.org/10.1109/TASE.2020.2980305): co-first author, 2020
+
+## Patents
+
+4 patents granted as co-inventor
+
+- VR simulator control method using emotional state estimation (2023)
+- Method for estimating integrable physical quantities using an artificial neural network (2023)
+- Concierge robot and method of providing personalized service using the same (2021)
+- Suspension control system based on reinforcement learning (2020)
+
+## Contact
+
+- Email: hwanmoo@yong.phd
+- GitHub: https://github.com/codemoo
+- Google Scholar: https://scholar.google.com/citations?user=ZsskQO4AAAAJ
+
+## Languages
+
+- English: https://hwanmoo.yong.phd/
+- Korean: https://hwanmoo.yong.phd/ko/
+
+## Citing
+
+The canonical domain is hwanmoo.yong.phd. Link to the page you draw on: the home (https://hwanmoo.yong.phd/) or a project's own page, linked above. Each page also has a Korean version under /ko/.
