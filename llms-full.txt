@@ -26,8 +26,8 @@
 - [Company-wide ERP for a music rights firm](https://hwanmoo.yong.phd/work/music-royalty-erp/): 2023–now · Sole engineer, end to end · Automated royalty statements and settlement
 - [Mobile rewards app and platform](https://hwanmoo.yong.phd/work/rewards-platform/): 2023–now · iOS/Android app, backend and back office · Ledger of hundreds of millions of transactions
 - [Cardiac imaging AI service](https://hwanmoo.yong.phd/work/cardiac-imaging-ai/): 2023 · Sole developer · Built the AI analysis server, app and website
-- [Referral and patient-record services for a major hospital's research team](https://hwanmoo.yong.phd/work/hospital-clinical-services/): 2021–25 · Sole developer · Mobile apps, web apps and servers, with medical-device integration
-- [Live-streaming app for street musicians](https://hwanmoo.yong.phd/work/busking-live-streaming/): 2021–23 · iOS/Android app and real-time server · Real-time live video from a single phone, with every viewer's reactions synced to the whole audience
+- [Referral and patient-record services for a major hospital's research team](https://hwanmoo.yong.phd/work/hospital-clinical-services/): 2021–23 · Sole developer · Mobile apps, web apps and servers, with medical-device integration
+- [Live-streaming app for street musicians](https://hwanmoo.yong.phd/work/busking-live-streaming/): 2021 · iOS/Android app and real-time server · Real-time live video from a single phone, with every viewer's reactions synced to the whole audience
 - [Repeat-purchase commerce app and platform](https://hwanmoo.yong.phd/work/reorder-commerce/): 2020–23 · Co-founder · app and backend development · Built everything, from the iOS/Android app to payments and delivery tracking
 - [Paid membership platform](https://hwanmoo.yong.phd/work/paid-membership-platform/): 2020–21 · From payments and automated messaging to retention and revenue analytics
 - [Custom-fit ordering with AI sizing from phone video](https://hwanmoo.yong.phd/work/ai-sizing-custom-orders/): 2020–21
@@ -186,7 +186,7 @@ The research team's AI shipped as a phone app and a web service and went into re
 URL: https://hwanmoo.yong.phd/work/hospital-clinical-services/
 Korean: https://hwanmoo.yong.phd/ko/work/hospital-clinical-services/
 
-Development · 2021–25 · Sole developer
+Development · 2021–23 · Sole developer
 
 A major hospital's research team needed software to connect its clinicians with outside clinics and with patients at home. Clinics refer patients or ask for advice, and patients send in readings they take themselves. I took on three services for this, all of which handled patient data and had to outlive the studies behind them.
 
@@ -201,7 +201,7 @@ For patients, I built an app that talks directly to a dedicated measuring device
 URL: https://hwanmoo.yong.phd/work/busking-live-streaming/
 Korean: https://hwanmoo.yong.phd/ko/work/busking-live-streaming/
 
-Development · 2021–23 · iOS/Android app and real-time server
+Development · 2021 · iOS/Android app and real-time server
 
 This busking app lets a musician go live from a single phone, and the audience gathers on virtual streets to watch. Viewers take seats, wave light sticks and send emoji or tips while the song is still playing. For that to feel like being there, the video has to arrive in real time and every reaction has to reach the whole audience at once.
 
