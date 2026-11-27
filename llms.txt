@@ -33,8 +33,8 @@
 - [Custom-fit ordering with AI sizing from phone video](https://hwanmoo.yong.phd/work/ai-sizing-custom-orders/): 2020–21
 - [Back office and in-house commerce platform for an eyewear store network](https://hwanmoo.yong.phd/work/eyewear-retail-platform/): 2018–20 · From customer requests to settlement, across hundreds of stores
 - [Corporate travel management platform](https://hwanmoo.yong.phd/work/corporate-travel-platform/): 2017–18 · Integrated with global airline reservation systems
-- Multi-party scheduling app: 2015–17
-- Student and grade management system for after-school academies: 2014–16
+- [Multi-party scheduling app](https://hwanmoo.yong.phd/work/multi-party-scheduling/): 2015–17 · iOS app, web and server · Scores every start time against everyone's free time and negotiates when none suits all
+- [Student and grade management system for after-school academies](https://hwanmoo.yong.phd/work/academy-management-system/): 2014–16 · Sole developer · One attendance check updates prepaid tuition and instructor pay, and every test is analyzed question by question
 
 ## Research projects
 

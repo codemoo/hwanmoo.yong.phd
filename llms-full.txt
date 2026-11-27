@@ -33,8 +33,8 @@
 - [Custom-fit ordering with AI sizing from phone video](https://hwanmoo.yong.phd/work/ai-sizing-custom-orders/): 2020–21
 - [Back office and in-house commerce platform for an eyewear store network](https://hwanmoo.yong.phd/work/eyewear-retail-platform/): 2018–20 · From customer requests to settlement, across hundreds of stores
 - [Corporate travel management platform](https://hwanmoo.yong.phd/work/corporate-travel-platform/): 2017–18 · Integrated with global airline reservation systems
-- Multi-party scheduling app: 2015–17
-- Student and grade management system for after-school academies: 2014–16
+- [Multi-party scheduling app](https://hwanmoo.yong.phd/work/multi-party-scheduling/): 2015–17 · iOS app, web and server · Scores every start time against everyone's free time and negotiates when none suits all
+- [Student and grade management system for after-school academies](https://hwanmoo.yong.phd/work/academy-management-system/): 2014–16 · Sole developer · One attendance check updates prepaid tuition and instructor pay, and every test is analyzed question by question
 
 ## Research projects
 
@@ -285,6 +285,36 @@ I designed and built one web service, with separate traveler and agency views, t
 I set the scope of automation to fit local payment rules: the service handles search, proposal and confirmation, and agents issue the tickets. I then extended the platform into the agency's back office, where multiple reservation systems deliver ticket files every day, each in its own format. I designed a database that tracks each ticket, with its reissues, refunds and fees, as a single record, and wrote the parser that feeds it.
 
 The travel service went into production and opened in beta to the agency's corporate clients. In the back office, ticket upload, search and report export were deployed, bringing ticket data from multiple global reservation systems into one place.
+
+### Multi-party scheduling app
+
+URL: https://hwanmoo.yong.phd/work/multi-party-scheduling/
+Korean: https://hwanmoo.yong.phd/ko/work/multi-party-scheduling/
+
+Development · 2015–17 · iOS app, web and server
+
+This app finds a time when a whole group can meet, so no one has to poll everyone by message. The organizer picks candidate dates and sets the time window and the meeting's length on a 24-hour dial. Invitees tap only the half hours they're busy, and the app fills in what it already knows from the phone's calendar and from what they marked for that date in an earlier plan.
+
+I built the server that scores every possible start time on every candidate date. A person earns the square of each unbroken stretch of free time inside the meeting, so one long free block counts for more than the same time in pieces. When two start times offer the same total free time, the one where someone's busy half hour falls at the start or end ranks above the one where it cuts their free time in two.
+
+When no time suits everyone, the app negotiates instead of settling. Only the people in the way get a card, each asking whether they can free the highest-ranked time they block. Once the cards are answered, the app ranks the times again and confirms the best one.
+
+Scheduled jobs handle replies to the invitation itself, sending a reminder before the deadline, stopping the deadline clock overnight and counting anyone still silent as a no-show. The app works in Korean and English, and people without it answer through a text link on the web. From the invitation to the confirmed time that reaches everyone by push or text, every question comes from the app, not the organizer.
+
+### Student and grade management system for after-school academies
+
+URL: https://hwanmoo.yong.phd/work/academy-management-system/
+Korean: https://hwanmoo.yong.phd/ko/work/academy-management-system/
+
+Development · 2014–16 · Sole developer
+
+Two web systems run an after-school academy: an operations system that keeps each campus's books and payroll and also serves the academy's public website, and a grading system that analyzes every test and keeps a counseling card for each student. The academy sells tuition in prepaid blocks of sessions and pays instructors by attendance, so one wrong mark on the roster throws off both the tuition ledger and the payroll. The operations system therefore works out remaining sessions, unpaid classes and pay from a single record of who attended which class on which day.
+
+One attendance check draws a session from the oldest prepaid block that still has sessions left, and unchecking puts it back. Once the blocks run out, classes attended after that show as unpaid with a payment due date, and a payment recorded later can cover them. Each student's ledger also shows the classes left and the tuition after any multi-subject discount.
+
+Each question is tagged by type and unit and carries its points and answer, so every test is analyzed question by question for correct rates, the mean and standard deviation, and type averages, and each student's misses add up across tests by type and unit. No score is added up by hand: a web answer sheet for a class test is graded the moment a student submits it, staff can simply mark the wrong answers, and fixing an answer key regrades every sheet. A report card opened from a personal link shows rank and score trends, official mock-exam results over time, and a standard score with a percentile and 1–9 grade band among test-takers, and it can also be exported as an A4 PDF.
+
+Instructor pay comes from the same attendance record: each class has a rate per student per session, set month by month, and each instructor's payslip shows that rate times attendance, minus withholding tax. Staff text everyone, chosen classes or single students, with each student reached only once, and when they send a payment reminder, the bank details are added automatically. Once the old spreadsheet roster and unpaid balances were imported in bulk, with classes, instructors and enrollments created and duplicate students merged along the way, the operations system became the academy's day-to-day ledger for tuition and pay.
 
 ### AI test driver for next-generation steering systems
 
