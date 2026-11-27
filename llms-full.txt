@@ -51,10 +51,10 @@
 
 4 SCI(E) journal papers, 2 as first author, 1 as co-first author
 
-- [IEEE Transactions on Industrial Electronics](https://doi.org/10.1109/TIE.2022.3153805): first author, 2023
-- [Nonlinear Dynamics](https://doi.org/10.1007/s11071-021-06598-7): first author, 2021
-- [Physics Letters A](https://doi.org/10.1016/j.physleta.2020.127005): co-author, 2021
-- [IEEE Transactions on Automation Science and Engineering](https://doi.org/10.1109/TASE.2020.2980305): co-first author, 2020
+- [Suspension Control Strategies Using Switched Soft Actor-Critic Models for Real Roads](https://doi.org/10.1109/TIE.2022.3153805): IEEE Transactions on Industrial Electronics, first author, 2023
+- [State reconstruction in a nonlinear vehicle suspension system using deep neural networks](https://doi.org/10.1007/s11071-021-06598-7): Nonlinear Dynamics, first author, 2021
+- [Training an artificial neural network for recognizing electron collision patterns](https://doi.org/10.1016/j.physleta.2020.127005): Physics Letters A, co-author, 2021
+- [Customer-Specific Robotic Attendant for VR Simulators](https://doi.org/10.1109/TASE.2020.2980305): IEEE Transactions on Automation Science and Engineering, co-first author, 2020
 
 ## Patents
 
